@@ -5,10 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>BoolZapp</title>
 </head>
 <body>
     
+    <main class="container" id="root">
+
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-top-left">
+                    <img src="img/avatar_io.jpg" alt="immagine profilo utente">
+                    <h5>Nome Utente</h5>
+                </div>
+                <div class="sidebar-top-right">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-regular fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="sidebar-bottom">
+                <div class="notifiche">
+
+                </div>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <div class="contacts"></div>
+            </div>
+        </aside>
+
+        <section class="main">
+            <div class="main-top">
+                <div class="main-top-left">
+                    <img src="img/avatar_1.jpg" alt="immagine profilo">
+                    <div>
+                        <h5>Michele</h5>
+                        <p>ciaociaociao</p>
+                    </div>
+                </div>
+                <div class="main-top-right">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="main-middle">
+                <div class="message-send">
+                    <p>ciao</p>
+                </div>
+                <div class="message-receive">
+                    <p>ciao a te</p>
+                </div>
+            </div>
+            <div class="main-bottom">
+                <div class="icons">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <div class="icons">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

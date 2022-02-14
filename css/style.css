@@ -3,3 +3,156 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main.container {
+    width: 70%;
+    min-width: 978px;
+    margin: 50px auto;
+    height: calc(100vh - 100px);
+    border: 1px solid lightgray;
+}
+
+main.container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.sidebar {
+    width: 30%;
+    float: left;
+    height: 100%;
+}
+
+.sidebar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(229,229,229);
+    border: 1px solid lightgray;
+}
+
+.sidebar-top-left {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-top img {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0px 8px;
+}
+
+.sidebar-bottom {
+    height: calc(100% - 50px);
+}
+
+.sidebar-bottom .notifiche {
+    height: 70px;
+    background-color: rgb(126,210,250);
+}
+
+.sidebar-bottom input {
+    width: 90%;
+    margin: 10px 5%;
+    height: 20px;
+    padding: 0 10px;
+}
+
+.sidebar-bottom .contacts {
+    overflow-y: scroll;
+}
+
+section.main {
+    width: 70%;
+    float: left;
+    height: 100%;
+}
+
+.main-top {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(229,229,229);
+    border: 1px solid lightgray;
+}
+
+.main-top-left {
+    display: flex;
+    align-items: center;
+}
+
+.main-top-left img {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0px 8px;
+}
+
+i {
+    padding: 0px 8px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.main-middle {
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+    background-image: url(../img/mine.jpg);
+    background-repeat: repeat; 
+}
+
+.main-bottom {
+    height: 50px;
+    background-color: rgb(240,234,228);
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-bottom input {
+    width: calc(100% - 100px);
+    height: 80%;
+    padding: 0 10px;
+}
+
+.main-bottom .icons {
+    width: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.message-send {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message-send p {
+    background-color: rgb(204, 251, 171);
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.message-receive {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message-receive p {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 10px;
+    min-width: 200px;
+}
