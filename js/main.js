@@ -2,7 +2,7 @@ const app = new Vue(
     {
         el: '#root',
         data: {
-            /*search: '',*/
+            search: '',
             active: 0,
             newMessage: '',
             contacts: [
@@ -118,16 +118,15 @@ const app = new Vue(
                     this.contacts[this.active].messages.push(newMessageReply);
                 }, 1000);
             },
-            /*searchChat() {
-                let nuovoArray = [];
-                for(let i = 0; i<this.contacts.length;i++) {
-                    nuovoArray.push(this.contacts[i].name)
-                }
-                let split = nuovoArray.split('');
-                if(this.search.includes(split)) {
-
-                }              
-            }*/
+            searchChat() {
+                this.contacts.forEach((element) => {
+                    if(element.name.toLowerCase().includes(this.search.toLowerCase())) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                })
+            }
         }
     }
 )
