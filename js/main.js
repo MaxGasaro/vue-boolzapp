@@ -2,6 +2,9 @@ const app = new Vue(
     {
         el: '#root',
         data: {
+            /*search: '',*/
+            active: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -89,7 +92,42 @@ const app = new Vue(
             ],
         },
         methods: {
+            activeContact(index) {
+                this.active = index;
+            },
+            sendMessage() {
+                const newMessageObj = {
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: this.newMessage,
+                    status: 'sent',
+                };
 
+                console.log(newMessageObj);
+
+                this.contacts[this.active].messages.push(newMessageObj);
+
+                this.newMessage = '';
+
+                const newMessageReply = {
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: 'ok',
+                    status: 'received'
+                };
+
+                setTimeout(() => {
+                    this.contacts[this.active].messages.push(newMessageReply);
+                }, 1000);
+            },
+            /*searchChat() {
+                let nuovoArray = [];
+                for(let i = 0; i<this.contacts.length;i++) {
+                    nuovoArray.push(this.contacts[i].name)
+                }
+                let split = nuovoArray.split('');
+                if(this.search.includes(split)) {
+
+                }              
+            }*/
         }
     }
 )
